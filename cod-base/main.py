@@ -1,3 +1,5 @@
+# código base retirado de https://pythonguides.com/create-a-game-using-python-pygame/
+
 import pygame, sys
 import numpy as np
 import socket

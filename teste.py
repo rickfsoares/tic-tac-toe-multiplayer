@@ -61,9 +61,15 @@ def receive_data():
 def waiting_for_connection():
   global connection_established, conn, addr
   conn, addr = sock.accept() # esperando conexão
-  print('cliente conectado')
   connection_established = True
-  receive_data()
+
+def player_status():
+  if connection_established:
+    print('jogador conectado')
+    while connection_established:
+      receive_data()
+  print('Jogador desconectado')
+player_status()
 
 create_tread(waiting_for_connection)
 

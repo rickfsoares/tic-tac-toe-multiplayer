@@ -2,16 +2,9 @@
 
 import pygame, sys
 import numpy as np
-import socket
-import threading
 
 HOST = 'localhost'
 PORT = 8082
-
-# criação do tcp socket
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-sock.connect((HOST, PORT))
 
 pygame.init()
 
